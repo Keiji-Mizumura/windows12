@@ -10,7 +10,7 @@ import notepadIcon from '../../../../assets/icons/notepad.png';
 import runIcon from '../../../../assets/icons/run.png';
 import leagueIcon from '../../../../assets/icons/LOL.jpg';
 
-function Menu(){
+function Menu({ clickedItem }){
     return(
         <div className={styles.menu}>
             <MenuItem 
@@ -35,6 +35,7 @@ function Menu(){
             <MenuItem 
                 title={<>Notepad</>}
                 icon={notepadIcon}
+                onClick={clickedItem}
             />
             <MenuItem 
                 title={<><u>R</u>un</>}

@@ -9,12 +9,20 @@ import { useState } from "react"
 function App() {
 
   const [showStartMenu, setShowStartMenu] = useState(false)
+  const [activeWindows, setActiveWindows] = useState([]);
+
+  function addWindow(){
+    const windows = activeWindows;
+    windows.push(<Notepad/>);
+    setActiveWindows(windows);
+    setShowStartMenu(!showStartMenu);
+   }
 
   return (
     <>
       <Desktop>
-        <Notepad />
-        <StartMenu visibility={showStartMenu}/>
+        {activeWindows.map((result, index) => result)}
+        <StartMenu visibility={showStartMenu} clickedItem={()=>addWindow()}/>
         <ShortcutGrid />
         <Taskbar startButtonClick={ () => setShowStartMenu(!showStartMenu) } visibility={showStartMenu}/>
       </Desktop>
