@@ -5,6 +5,7 @@ import StartMenu from "./components/ui/taskbar/startmenu/Startmenu"
 import Taskbar from "./components/ui/taskbar/Taskbar"
 
 import { useState } from "react"
+import Welcome from "./components/welcome/Welcome"
 
 function App() {
 
@@ -14,6 +15,7 @@ function App() {
     <>
       <Desktop>
         <Notepad />
+        <Welcome/>
         <StartMenu visibility={showStartMenu}/>
         <ShortcutGrid />
         <Taskbar startButtonClick={ () => setShowStartMenu(!showStartMenu) } visibility={showStartMenu}/>
