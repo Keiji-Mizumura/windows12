@@ -11,9 +11,9 @@ function App() {
   const [showStartMenu, setShowStartMenu] = useState(false)
   const [activeWindows, setActiveWindows] = useState([]);
 
-  function addWindow(){
+  function addWindow(content){
     const windows = activeWindows;
-    windows.push(<Notepad/>);
+    windows.push(content);
     setActiveWindows(windows);
     setShowStartMenu(!showStartMenu);
    }
@@ -21,8 +21,14 @@ function App() {
   return (
     <>
       <Desktop>
+        <div style={{
+          width: "100%",
+          height: "100%",
+          position: "absolute"
+        }}>
         {activeWindows.map((result, index) => result)}
-        <StartMenu visibility={showStartMenu} clickedItem={()=>addWindow()}/>
+        </div>
+        <StartMenu visibility={showStartMenu} clickedItem={addWindow}/>
         <ShortcutGrid />
         <Taskbar startButtonClick={ () => setShowStartMenu(!showStartMenu) } visibility={showStartMenu}/>
       </Desktop>

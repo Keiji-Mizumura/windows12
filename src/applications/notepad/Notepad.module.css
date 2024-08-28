@@ -1,11 +1,11 @@
 .notepad_container{
-    width: 500px;
-    height: calc(300px - 20px);
+   width: 100%;
+   height: 100%;
 }
 
 .textarea{
    width: 100%;
-   height: 100%;
+   height: 95%;
    resize: none;
    padding: 10px;
 }

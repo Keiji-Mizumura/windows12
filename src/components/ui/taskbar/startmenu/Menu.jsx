@@ -9,6 +9,8 @@ import settingsIcon from '../../../../assets/icons/settings.png';
 import notepadIcon from '../../../../assets/icons/notepad.png';
 import runIcon from '../../../../assets/icons/run.png';
 import leagueIcon from '../../../../assets/icons/LOL.jpg';
+import Notepad from '../../../../applications/notepad/Notepad';
+import LeagueClient from '../../../../applications/LoL/LeagueClient';
 
 function Menu({ clickedItem }){
     return(
@@ -35,7 +37,7 @@ function Menu({ clickedItem }){
             <MenuItem 
                 title={<>Notepad</>}
                 icon={notepadIcon}
-                onClick={clickedItem}
+                onClick={() => clickedItem(<Notepad/>)}
             />
             <MenuItem 
                 title={<><u>R</u>un</>}
@@ -44,6 +46,7 @@ function Menu({ clickedItem }){
             <MenuItem 
                 title="League of Legends"
                 icon={leagueIcon}
+                onClick={() => clickedItem(<LeagueClient/>)}
             />
             <MenuItem
                 shutdown={true}

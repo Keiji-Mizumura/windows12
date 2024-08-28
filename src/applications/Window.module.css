@@ -11,5 +11,19 @@
     color: #fff;
     display: flex;
     align-items: center;
-    padding: 10px;
+    justify-content: space-between;
+}
+
+.title{
+    padding-left: 10px;
+}
+
+.controls{
+    display: flex;
+    width: 50px;
+}
+
+.controls > *{
+    flex: 1;
+    padding: 2px;
 }

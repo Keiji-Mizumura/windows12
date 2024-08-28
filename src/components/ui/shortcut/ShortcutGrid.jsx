@@ -6,6 +6,7 @@ import discordIcon from '../../../assets/icons/discord.png'
 import folderIcon from '../../../assets/icons/folder.png'
 import leagueIcon from '../../../assets/icons/LOL.jpg'
 import osuIcon from '../../../assets/icons/osu-logo.svg'
+import frozenThrone from '../../../assets/icons/frozenthrone.png'
 
 const shortcuts = [
     {
@@ -24,9 +25,15 @@ const shortcuts = [
         title: "League of Legends",
         icon: leagueIcon
     },
+    
     {
         title: "osu!",
         icon: osuIcon
+    },
+
+    {
+        title: "Frozen throne",
+        icon: frozenThrone
     }
 
 ]
