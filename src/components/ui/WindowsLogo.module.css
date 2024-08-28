@@ -1,17 +1,17 @@
 .windows_logo{
-    height: 18px;
-    width: 18px;
+    height: 3.5vh;
+    width: 3.5vh;
     display: grid;
     grid-template-columns: 1fr 1fr;
     gap: 1px;
 }
 
 .square{
-    border: 1px solid var(--windows-black);
+    border: 0.2vh solid var(--windows-black);
 }
 
 .square.windows-logo .square{
-    border: 1px solid var(--windows-black);
+    border: 0.2vh solid var(--windows-black);
 }
 
 .square:nth-child(1){

@@ -2,8 +2,8 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    gap: 10px;
+    gap: 1vh;
     font-weight: bold;
-    font-size: .8em;
+    font-size: 1.8vh;
     padding: 0 5px;
 }

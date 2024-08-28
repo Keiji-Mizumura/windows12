@@ -1,8 +1,6 @@
 .window{
     border: 2px solid var(--main-color);
     background-color: var(--main-color);
-    height: 300px;
-    width: 500px;
     position: absolute;
 }
 

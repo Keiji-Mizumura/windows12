@@ -1,5 +1,6 @@
 .notepad_container{
-    height: calc(100% - 20px);
+    width: 500px;
+    height: calc(300px - 20px);
 }
 
 .textarea{
