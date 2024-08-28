@@ -1,0 +1,28 @@
+.item{
+    cursor: pointer;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 100%;
+    gap: 15px;
+    font-size: .8em;
+    padding: 0 8px;
+}
+
+.item img{
+    height: 40px;
+}
+
+.item:hover{
+    background-color: var(--windows-dark-blue);
+    color: #fff;
+}
+
+.text{
+    flex-grow: 3;
+}
+
+.arrow{
+    text-align: right;
+}

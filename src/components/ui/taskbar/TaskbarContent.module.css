@@ -1,0 +1,4 @@
+.taskbar_content{
+    display: flex;
+    flex-grow: 1;
+}

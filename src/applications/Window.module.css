@@ -1,0 +1,17 @@
+.window{
+    border: 2px solid var(--main-color);
+    background-color: var(--main-color);
+    height: 300px;
+    width: 500px;
+    position: absolute;
+}
+
+.title_bar{
+    height: 20px;
+    background-color: var(--windows-dark-blue);
+    font-size: .8em;
+    color: #fff;
+    display: flex;
+    align-items: center;
+    padding: 10px;
+}

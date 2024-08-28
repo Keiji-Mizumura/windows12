@@ -1,0 +1,22 @@
+:root {
+  --main-color: rgb(214, 214, 214);
+  --main-color-light: rgb(238, 238, 238);
+  --windows-red: #FF3300;
+  --windows-blue: #02A5FF;
+  --windows-green: #66CC33;
+  --windows-yellow: #FFCC00;
+  --windows-black: #000000;
+
+  --windows-dark-blue: #394DCD;
+
+  --windows-blue-transparent: #02a6ff99;
+
+  --global-padding: 0 15px;
+  font-family: sans-serif;
+}
+
+*{
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}

@@ -1,0 +1,23 @@
+.shortcut{
+    cursor: pointer;
+    display: flex;
+    width: 80px;
+    flex-direction: column;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    gap: 5px;
+    color: #fff;
+    border: 1px solid rgba(0,0,0,0);
+    font-size: .8em;
+}
+
+.shortcut:hover{
+    border: 1px solid var(--windows-blue);
+    background-color: var(--windows-blue-transparent);
+}
+
+.shortcut_icon{
+    height: 6.5vh;
+}
+

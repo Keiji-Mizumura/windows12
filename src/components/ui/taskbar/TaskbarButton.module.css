@@ -1,0 +1,11 @@
+.taskbar_button{
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    font-size: .7em;
+    padding: 0 5px;
+}
+
+.taskbar_icon{
+    height: 3vh;
+}
