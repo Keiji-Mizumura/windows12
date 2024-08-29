@@ -4,10 +4,14 @@ import ShortcutGrid from "./components/ui/shortcut/ShortcutGrid";
 import StartMenu from "./components/ui/taskbar/startmenu/Startmenu";
 import Taskbar from "./components/ui/taskbar/Taskbar";
 
+import { useState } from "react"
+import Welcome from "./components/welcome/Welcome"
+
 // Simple unique key generator function
 function generateUniqueKey() {
   return `window-${Date.now()}-${Math.random()}`;
 }
+
 
 function App() {
   const [showStartMenu, setShowStartMenu] = useState(false);
