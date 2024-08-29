@@ -9,4 +9,5 @@
     justify-content: space-between;
     padding: 1px 3px;
     gap: 1px;
+    z-index: 1000;
 }

@@ -7,6 +7,7 @@ import folderIcon from '../../../assets/icons/folder.png'
 import leagueIcon from '../../../assets/icons/LOL.jpg'
 import osuIcon from '../../../assets/icons/osu-logo.svg'
 import frozenThrone from '../../../assets/icons/frozenthrone.png'
+import notepadIcon from '../../../assets/icons/notepad.png'
 
 import Notepad from '../../../applications/notepad/Notepad'
 import Chrome from '../../../applications/Chrome/Chrome'
@@ -47,6 +48,12 @@ const shortcuts = [
         title: "Frozen throne",
         icon: frozenThrone,
         isShortcut: true
+    },
+
+    {
+        title: "wifi-password.txt",
+        icon: notepadIcon,
+        item: <Notepad title="wifi-password.txt" content="abcdefg12345" />
     }
 
 ]

@@ -25,7 +25,7 @@ function Window({ children, title, onClose, icon, onActive, coordinates, default
                 height: windowSize.height + d.height,
               });
             }}
-            style={visible ? {position: "absolute"} : {display: "none"}}
+            style={visible ? {position: "absolute", zIndex: "100"} : {display: "none"}}
             >
             
                 <div className={styles.window} style={{ width: windowSize.width, height: windowSize.height}} onClick={onActive}>
