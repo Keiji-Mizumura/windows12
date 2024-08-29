@@ -8,7 +8,7 @@ import ChromeIcon from "../../assets/icons/chrome-logo.svg"
 import { useState } from 'react';
 import Button from '../../components/ui/buttons/Button';
 
-function LeagueClient({ onClose, onActive, coordinates}){
+function Chrome({ onClose, onActive, coordinates}){
 
     const [currentURL, setCurrentURL] = useState('http://web.archive.org/web/20020830214217/http://www.google.com/');
     const [currentInput, setCurrentInput] = useState('http://web.archive.org/web/20020830214217/http://www.google.com/');
@@ -51,4 +51,4 @@ function LeagueClient({ onClose, onActive, coordinates}){
     )
 }
 
-export default LeagueClient
+export default Chrome

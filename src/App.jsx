@@ -61,7 +61,7 @@ function App() {
       [...prevWindows.map((win) => ({ ...win, active: false })), newWindow]
     );
   
-    setShowStartMenu(!showStartMenu);
+    setShowStartMenu(false);
   }
   
 
@@ -74,7 +74,7 @@ function App() {
         .map((result) => result.element)}
 
         <StartMenu visibility={showStartMenu} clickedItem={addWindow} />
-        <ShortcutGrid />
+        <ShortcutGrid clickedItem={addWindow}/>
         <Taskbar
           startButtonClick={() => setShowStartMenu(!showStartMenu)}
           visibility={showStartMenu}

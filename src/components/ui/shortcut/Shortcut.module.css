@@ -10,6 +10,7 @@
     color: #fff;
     border: 1px solid rgba(0,0,0,0);
     font-size: 1.5vh;
+    position: relative;
 }
 
 .shortcut:hover{
@@ -21,3 +22,13 @@
     height: 6.5vh;
 }
 
+.shortcut_indicator{
+    background-color: #fff;
+    position: absolute;
+    left: 1vh;
+    bottom: 6vh;
+}
+
+.shortcut_indicator_image{
+    height: 1.3vh;
+}
