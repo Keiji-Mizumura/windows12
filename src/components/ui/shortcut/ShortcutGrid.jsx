@@ -41,7 +41,7 @@ const shortcuts = [
 function ShortcutGrid(){
     return (
         <div className={styles.shortcut_grid}>
-            {shortcuts.map(result => <Shortcut title={result.title} icon={result.icon}/>)}
+            {shortcuts.map((result, id) => <Shortcut title={result.title} icon={result.icon} key={id}/>)}
         </div>
     )
 }

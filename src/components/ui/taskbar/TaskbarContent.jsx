@@ -29,7 +29,7 @@ const taskbarItems = [
 function TaskbarContent(){
     return(
         <div className={styles.taskbar_content}>
-            {taskbarItems.map(result => <TaskbarButton title={result.title} icon={result.icon} active={result.active}/>)}
+            {taskbarItems.map((result, id) => <TaskbarButton title={result.title} icon={result.icon} active={result.active} key={id}/>)}
         </div>
     )
 }
