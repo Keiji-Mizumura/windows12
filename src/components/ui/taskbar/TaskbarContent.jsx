@@ -6,8 +6,10 @@ import chromeIcon from '../../../assets/icons/chrome-logo.svg'
 import discordIcon from '../../../assets/icons/discord.png'
 import notepadIcon from '../../../assets/icons/notepad.png'
 
-const taskbarItems = [
-    {
+import { useState } from 'react'
+
+function TaskbarContent({ activeWindows }){
+    const [taskbarItems, setTaskbarItems] = useState([{
         title: "League of Legends",
         icon: leagueIcon
     },
@@ -23,13 +25,12 @@ const taskbarItems = [
         title: "Notepad", 
         icon: notepadIcon,
         active: true
-    }
-]
+    }]);
 
-function TaskbarContent(){
+
     return(
         <div className={styles.taskbar_content}>
-            {taskbarItems.map((result, id) => <TaskbarButton title={result.title} icon={result.icon} active={result.active} key={id}/>)}
+            {activeWindows.map((result, id) => <TaskbarButton title={result.title} icon={result.icon} active={result.active} key={id}/>)}
         </div>
     )
 }

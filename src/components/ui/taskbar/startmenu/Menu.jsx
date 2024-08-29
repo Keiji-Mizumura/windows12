@@ -37,7 +37,10 @@ function Menu({ clickedItem }){
             <MenuItem 
                 title={<>Notepad</>}
                 icon={notepadIcon}
-                onClick={() => clickedItem(<Notepad/>)}
+                onClick={() => clickedItem(<Notepad/>, {
+                    title: "Notepad",
+                    icon: notepadIcon
+                })}
             />
             <MenuItem 
                 title={<><u>R</u>un</>}
@@ -46,7 +49,10 @@ function Menu({ clickedItem }){
             <MenuItem 
                 title="League of Legends"
                 icon={leagueIcon}
-                onClick={() => clickedItem(<LeagueClient/>)}
+                onClick={() => clickedItem(<LeagueClient/>,{
+                    title: "League of Legends",
+                    icon: leagueIcon
+                })}
             />
             <MenuItem
                 shutdown={true}

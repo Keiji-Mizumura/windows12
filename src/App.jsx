@@ -22,9 +22,12 @@ function App() {
     [setActiveWindows]
   );
 
-  function addWindow(content) {
+  function addWindow(content, data) {
     const uniqueKey = generateUniqueKey(); // Generate a unique ID
     const newWindow = {
+      title: data.title,
+      icon: data.icon,
+      active: false,
       element: React.cloneElement(content, {
         key: uniqueKey,
         onClose: () => onClose(uniqueKey),
@@ -44,6 +47,7 @@ function App() {
         <Taskbar
           startButtonClick={() => setShowStartMenu(!showStartMenu)}
           visibility={showStartMenu}
+          activeWindows={activeWindows}
         />
       </Desktop>
     </>
