@@ -1,10 +1,15 @@
 import React from 'react'
 import Window from '../../applications/Window'
 
-const Welcome = () => {
+const Welcome = ({ onClose, onActive, coordinates, visible, title, content }) => {
   return (
     <>
-        <Window title="Welcome">
+        <Window title="Welcome"
+                onClose={onClose} 
+                icon=""
+                onActive={onActive} 
+                coordinates={coordinates}
+                defaultSize={{width: 500, height: 300}}>
             <div className="p-2"> 
               <h1 className="text-4xl font-serif">Welcome to <span className="font-extrabold font-sans">Windows</span><span className="text-white font-sans">12</span></h1>
               <div className="flex w-full gap-2">

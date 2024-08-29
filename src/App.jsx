@@ -4,7 +4,6 @@ import ShortcutGrid from "./components/ui/shortcut/ShortcutGrid";
 import StartMenu from "./components/ui/taskbar/startmenu/Startmenu";
 import Taskbar from "./components/ui/taskbar/Taskbar";
 
-import { useState } from "react"
 import Welcome from "./components/welcome/Welcome"
 
 // Simple unique key generator function
@@ -76,7 +75,7 @@ function App() {
         .slice() // Create a shallow copy of the array
         .sort((a, b) => a.active === b.active ? 0 : a.active ? 1 : -1) // Sort to place the active window at the end
         .map((result) => result.element)}
-
+        <Welcome coordinates={{x:50, y:50}}/>
         <StartMenu visibility={showStartMenu} clickedItem={addWindow} />
         <ShortcutGrid clickedItem={addWindow}/>
         <Taskbar
