@@ -1,4 +1,4 @@
-import React, { useState, useCallback, act } from "react";
+import React, { useState, useCallback } from "react";
 import Desktop from "./components/ui/desktop/Desktop";
 import ShortcutGrid from "./components/ui/shortcut/ShortcutGrid";
 import StartMenu from "./components/ui/taskbar/startmenu/Startmenu";
@@ -12,6 +12,7 @@ function generateUniqueKey() {
 function App() {
   const [showStartMenu, setShowStartMenu] = useState(false);
   const [activeWindows, setActiveWindows] = useState([]);
+  const [windowCoordinates, setWindowCoordinates] = useState({x: 200, y: 50});
 
   const onClose = useCallback(
     (key) => {
@@ -23,6 +24,7 @@ function App() {
   )
 
   function setCurrentWindow(key) {
+
     setActiveWindows((prevWindows) =>
       prevWindows.map((window) =>
         window.key === key
@@ -30,9 +32,14 @@ function App() {
           : { ...window, active: false }
       )
     );
-  }
+  }  
 
   function addWindow(content, data) {
+    setWindowCoordinates({
+      x: windowCoordinates.x + 10,
+      y: windowCoordinates.y + 10
+    });
+    
     const uniqueKey = generateUniqueKey(); // Generate a unique ID
     const newWindow = {
       title: data.title,
@@ -42,9 +49,11 @@ function App() {
         key: uniqueKey,
         onClose: () => onClose(uniqueKey),
         onActive: () => setCurrentWindow(uniqueKey),
-        active: true
+        visible: true,
+        coordinates: windowCoordinates
       }),
       key: uniqueKey,
+      visible: true
     };
   
     // Deactivate all other windows and add the new one as active
@@ -54,6 +63,7 @@ function App() {
   
     setShowStartMenu(!showStartMenu);
   }
+  
 
   return (
     <>
@@ -62,16 +72,18 @@ function App() {
         .slice() // Create a shallow copy of the array
         .sort((a, b) => a.active === b.active ? 0 : a.active ? 1 : -1) // Sort to place the active window at the end
         .map((result) => result.element)}
+
         <StartMenu visibility={showStartMenu} clickedItem={addWindow} />
         <ShortcutGrid />
         <Taskbar
           startButtonClick={() => setShowStartMenu(!showStartMenu)}
           visibility={showStartMenu}
           activeWindows={activeWindows}
+          taskbarClick={setCurrentWindow}
         />
       </Desktop>
     </>
   );
 }
 
-export default App;
+export default App; 

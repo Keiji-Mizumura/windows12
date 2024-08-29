@@ -5,17 +5,18 @@ import { Resizable } from 're-resizable';
 
 import { useState } from 'react';
 
-function Window({ children, title, onClose, icon, onActive, active }){
+function Window({ children, title, onClose, icon, onActive, coordinates, defaultSize }){
     const [windowSize, setWindowSize] = useState({
-        width: 400,
-        height: 400,
-        zIndex: 100
+        width: defaultSize.width,
+        height: defaultSize.height,
     })
+
+    const [visible, setVisible] = useState(true)
 
     return(
         <Draggable 
             handle=".handle"
-            defaultPosition={{x: 50, y: 50}}
+            defaultPosition={{x: coordinates.x, y: coordinates.y}}
             > 
             <Resizable size={{ width: windowSize.width, height: windowSize.height }}
             onResizeStop={(e, direction, ref, d) => {
@@ -24,7 +25,7 @@ function Window({ children, title, onClose, icon, onActive, active }){
                 height: windowSize.height + d.height,
               });
             }}
-            style={{position: "absolute"}}
+            style={visible ? {position: "absolute"} : {display: "none"}}
             >
             
                 <div className={styles.window} style={{ width: windowSize.width, height: windowSize.height}} onClick={onActive}>
@@ -32,7 +33,7 @@ function Window({ children, title, onClose, icon, onActive, active }){
                         <img src={icon} className={styles.title_bar_icon}/>
                         <p className={styles.title}>{title}</p>
                         <div className={styles.controls}>
-                            <Button>_</Button>
+                            <Button onClick={() => setVisible(false)}>_</Button>
                             <Button>□</Button>
                             <Button onClick={onClose}>×</Button>
                         </div>

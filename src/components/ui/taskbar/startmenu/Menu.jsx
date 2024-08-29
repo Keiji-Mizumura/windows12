@@ -10,7 +10,10 @@ import notepadIcon from '../../../../assets/icons/notepad.png';
 import runIcon from '../../../../assets/icons/run.png';
 import leagueIcon from '../../../../assets/icons/LOL.jpg';
 import Notepad from '../../../../applications/notepad/Notepad';
+import osuIcon from "../../../../assets/icons/osu-logo.svg";
+
 import LeagueClient from '../../../../applications/LoL/LeagueClient';
+import Osu from '../../../../applications/osu!/Osu';
 
 function Menu({ clickedItem }){
     return(
@@ -43,8 +46,12 @@ function Menu({ clickedItem }){
                 })}
             />
             <MenuItem 
-                title={<><u>R</u>un</>}
-                icon={runIcon}
+                title={<><u>o</u>su</>}
+                icon={osuIcon}
+                onClick={() => clickedItem(<Osu/>,{
+                    title: "osu!",
+                    icon: osuIcon
+                })}
             />
             <MenuItem 
                 title="League of Legends"

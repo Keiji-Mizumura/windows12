@@ -5,7 +5,9 @@
 
 .textarea{
    width: 100%;
-   height: calc(100% - 20px);
+   border-radius: 0px;
+   height: calc(100% - 20px - 3vh);
    resize: none;
    padding: 10px;
+   overflow: scroll;
 }
