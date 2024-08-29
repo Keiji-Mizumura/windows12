@@ -5,11 +5,11 @@ import notepadIcon from '../../assets/icons/notepad.png'
 import Window from "../Window";
 import MenuBar from '../MenuBar';
 
-function Notepad({ onClose, onActive, coordinates, visible }){
+function Notepad({ onClose, onActive, coordinates, visible, title, content }){
     if(visible){    
         return(
             <Window 
-                title={`Untitled - Notepad`} 
+                title={title ? `${title} - Notepad` : "Untitled - Notepad"} 
                 onClose={onClose} 
                 icon={notepadIcon} 
                 onActive={onActive} 
@@ -18,7 +18,9 @@ function Notepad({ onClose, onActive, coordinates, visible }){
                 >
                 <MenuBar />
                 <div className={styles.notepad_container}>
-                    <textarea className={styles.textarea}></textarea>
+                    <textarea className={styles.textarea}>
+                        {content}
+                    </textarea>
                 </div>
             </Window>
         )
