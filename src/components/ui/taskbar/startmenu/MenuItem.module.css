@@ -8,6 +8,7 @@
     gap: 15px;
     font-size: .8em;
     padding: 0 8px;
+    position: relative;
 }
 
 .item img{
@@ -25,4 +26,36 @@
 
 .arrow{
     text-align: right;
+}
+
+.item:hover>.nav{
+    display: block;
+}
+
+.nav{
+    display: none;
+    top: 0;
+    position: absolute;
+    width: 35vh;
+    right: -34vh;
+    background-color: var(--main-color);
+    color: #111;
+    border: 2px solid #fff;
+}
+
+.nav_item{
+    font-size: 2vh;
+    padding: 5px 15px;
+    display: flex;
+    align-items: center;
+    gap: 2vh;
+}
+
+.nav_item:hover{
+    color: #fff;
+    background-color: var(--windows-dark-blue);
+}
+
+.nav_image{
+    height: 3vh !important;
 }

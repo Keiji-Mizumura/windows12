@@ -1,9 +1,8 @@
 .window{
     border: 2px solid var(--main-color);
     background-color: var(--main-color);
-    height: 300px;
-    width: 500px;
     position: absolute;
+    z-index: 1000;
 }
 
 .title_bar{
@@ -13,5 +12,30 @@
     color: #fff;
     display: flex;
     align-items: center;
-    padding: 10px;
+    justify-content: space-between;
+}
+
+.title{
+    padding-left: 10px;
+    flex: 1;
+}
+
+.controls{
+    display: flex;
+    width: 8vh;
+    height: 80%;
+    margin: 2px;
+}
+
+.controls > *{
+    flex: 1;
+    padding: 0;
+    font-size: 2vh;
+    text-align: center;
+    line-height: 2vh;
+}
+
+.title_bar_icon{
+    height: 2vh;
+    padding-left: 1vh;
 }

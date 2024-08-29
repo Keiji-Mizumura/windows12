@@ -23,4 +23,13 @@
   padding: 0;
   margin: 0;
   box-sizing: border-box;
+  -webkit-user-select: none; /* Safari */
+  -ms-user-select: none; /* IE 10 and IE 11 */
+  user-select: none; /* Standard syntax */
+}
+
+textarea{
+  -webkit-user-select: auto; /* Safari */
+  -ms-user-select: auto; /* IE 10 and IE 11 */
+  user-select: auto; /* Standard syntax */
 }

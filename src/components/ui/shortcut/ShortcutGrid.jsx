@@ -6,15 +6,25 @@ import discordIcon from '../../../assets/icons/discord.png'
 import folderIcon from '../../../assets/icons/folder.png'
 import leagueIcon from '../../../assets/icons/LOL.jpg'
 import osuIcon from '../../../assets/icons/osu-logo.svg'
+import frozenThrone from '../../../assets/icons/frozenthrone.png'
+import notepadIcon from '../../../assets/icons/notepad.png'
+
+import Notepad from '../../../applications/notepad/Notepad'
+import Chrome from '../../../applications/Chrome/Chrome'
+import LeagueClient from '../../../applications/LoL/LeagueClient'
+import Osu from '../../../applications/osu!/Osu'
 
 const shortcuts = [
     {
         title: "Google Chrome",
-        icon: chromeIcon
+        icon: chromeIcon,
+        isShortcut: true,
+        item: <Chrome/>
     },
     {
         title: "Discord",
-        icon: discordIcon
+        icon: discordIcon,
+        isShortcut: true,
     },
     {
         title: "New folder",
@@ -22,19 +32,41 @@ const shortcuts = [
     },
     {
         title: "League of Legends",
-        icon: leagueIcon
+        icon: leagueIcon,
+        isShortcut: true,
+        item: <LeagueClient />
     },
+    
     {
         title: "osu!",
-        icon: osuIcon
+        icon: osuIcon,
+        isShortcut: true,
+        item: <Osu />
+    },
+
+    {
+        title: "Frozen throne",
+        icon: frozenThrone,
+        isShortcut: true
+    },
+
+    {
+        title: "wifi-password.txt",
+        icon: notepadIcon,
+        item: <Notepad title="wifi-password.txt" content="abcdefg12345" />
     }
 
 ]
 
-function ShortcutGrid(){
+function ShortcutGrid({ clickedItem }){
     return (
         <div className={styles.shortcut_grid}>
-            {shortcuts.map(result => <Shortcut title={result.title} icon={result.icon}/>)}
+            {shortcuts.map((result, id) => <Shortcut title={result.title} icon={result.icon} key={id} isShortcut={result.isShortcut}
+                onDoubleClick={() => clickedItem(result.item, {
+                    title: result.title,
+                    icon: result.icon
+                })}
+            />)}
         </div>
     )
 }

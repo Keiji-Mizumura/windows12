@@ -1,10 +1,19 @@
 import styles from './Shortcut.module.css'
+import shortcutIcon from '../../../assets/icons/shortcut.png'
 
-function Shortcut({ title, icon }){
+function Shortcut({ title, icon, isShortcut, onDoubleClick}){
     return(
-        <div className={styles.shortcut}>
+        <div className={styles.shortcut} onDoubleClick={onDoubleClick}>
+
+            {isShortcut &&
+            <div className={styles.shortcut_indicator}>
+                <img src={shortcutIcon} alt="shortcut" className={styles.shortcut_indicator_image}/>
+            </div>
+            }
+
             <img src={icon} alt={title} className={styles.shortcut_icon} />
-            {title}
+            {title} 
+
         </div>
     )
 }
