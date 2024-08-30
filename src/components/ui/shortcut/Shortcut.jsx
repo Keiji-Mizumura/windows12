@@ -1,7 +1,7 @@
 import styles from './Shortcut.module.css'
 import shortcutIcon from '../../../assets/icons/shortcut.png'
 
-function Shortcut({ title, icon, isShortcut, onDoubleClick}){
+const Shortcut = ({ title, icon, isShortcut, onDoubleClick}) =>{
     return(
         <div className={styles.shortcut} onDoubleClick={onDoubleClick}>
 

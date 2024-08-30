@@ -1,7 +1,7 @@
 import TaskbarButton from './TaskbarButton'
 import styles from './TaskbarContent.module.css'
 
-function TaskbarContent({ activeWindows, onClick }){
+const TaskbarContent = ({ activeWindows, onClick }) => {
     
     return(
         <div className={styles.taskbar_content}>

@@ -3,7 +3,7 @@ import WindowsLogo from "../../WindowsLogo"
 
 import styles from './StartButton.module.css'
 
-function StartButton({ onClick, activeState }){
+const StartButton = ({ onClick, activeState }) =>{
     return(
         <Button customStyle={styles.start_button} onClick={onClick} addedStyle={ activeState ? {backgroundColor: "#bbb", border: "2px solid #bbb"} : {}}>
             <WindowsLogo />

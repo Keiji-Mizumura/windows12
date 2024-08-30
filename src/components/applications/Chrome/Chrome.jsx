@@ -8,7 +8,7 @@ import ChromeIcon from "../../../assets/icons/chrome-logo.svg"
 import { useState } from 'react';
 import Button from '../../ui/buttons/Button';
 
-function Chrome({ onClose, onActive, coordinates}){
+const Chrome = ({ onClose, onActive, coordinates}) =>{
 
     const [currentURL, setCurrentURL] = useState('http://web.archive.org/web/20020830214217/http://www.google.com/');
     const [currentInput, setCurrentInput] = useState('http://web.archive.org/web/20020830214217/http://www.google.com/');

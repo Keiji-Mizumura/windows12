@@ -4,7 +4,7 @@ import osuIcon from '../../../assets/icons/osu-logo.svg'
 
 import Window from "../Window";
 
-function Osu({ onClose, onActive, coordinates, visible }){
+const Osu = ({ onClose, onActive, coordinates, visible }) =>{
     if(visible){    
         return(
             <Window 

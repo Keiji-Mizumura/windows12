@@ -58,7 +58,7 @@ const shortcuts = [
 
 ]
 
-function ShortcutGrid({ clickedItem }){
+const ShortcutGrid = ({ clickedItem }) =>{
     return (
         <div className={styles.shortcut_grid}>
             {shortcuts.map((result, id) => <Shortcut title={result.title} icon={result.icon} key={id} isShortcut={result.isShortcut}

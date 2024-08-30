@@ -6,7 +6,7 @@ const month = today.getMonth()+1;
 const year = today.getFullYear();
 const date = today. getDate();
 
-function SystemTray(){
+const SystemTray = () =>{
     return(
         <div className={styles.system_tray}>
             <div className={styles.date_time}>

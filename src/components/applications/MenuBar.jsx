@@ -2,7 +2,7 @@ import styles from "./MenuBar.module.css"
 
 import { useState } from "react"
 
-function MenuBar(){
+const MenuBar = () =>{
     const [showDropDown, setShowDropDown] = useState(false);
 
     return(

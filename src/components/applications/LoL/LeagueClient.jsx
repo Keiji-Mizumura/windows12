@@ -4,7 +4,7 @@ import Window from "../Window"
 
 import LoLIcon from "../../../assets/icons/LOL.jpg"
 
-function LeagueClient({ onClose, onActive, coordinates}){
+const LeagueClient = ({ onClose, onActive, coordinates}) =>{
     return(
         <>
             <Window 

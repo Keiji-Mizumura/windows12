@@ -5,7 +5,7 @@ import notepadIcon from '../../../assets/icons/notepad.png'
 import Window from "../Window";
 import MenuBar from '../MenuBar';
 
-function Notepad({ onClose, onActive, coordinates, visible, title, content }){
+const Notepad = ({ onClose, onActive, coordinates, visible, title, content }) =>{
     if(visible){    
         return(
             <Window 

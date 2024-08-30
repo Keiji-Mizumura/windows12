@@ -3,7 +3,7 @@ import SystemTray from '../systemtray/SystemTray'
 import TaskbarContent from './TaskbarContent'
 
 import styles from './Taskbar.module.css'
-function Taskbar({ startButtonClick, visibility, activeWindows, taskbarClick}){
+const Taskbar = ({ startButtonClick, visibility, activeWindows, taskbarClick}) => {
     return(
         <div className={styles.taskbar}>
             <StartButton onClick={startButtonClick} activeState={visibility}/>

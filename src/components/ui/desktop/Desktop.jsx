@@ -1,6 +1,6 @@
 import styles from './Desktop.module.css';
 
-function Desktop({ children }){
+const Desktop = ({ children }) => {
     return(
         <div className={styles.desktop}>
             {children}

@@ -5,7 +5,7 @@ import { Resizable } from 're-resizable';
 
 import { useState } from 'react';
 
-function Window({ children, title, onClose, icon, onActive, coordinates, defaultSize }){
+const Window = ({ children, title, onClose, icon, onActive, coordinates, defaultSize }) => {
     const [windowSize, setWindowSize] = useState({
         width: defaultSize.width,
         height: defaultSize.height,

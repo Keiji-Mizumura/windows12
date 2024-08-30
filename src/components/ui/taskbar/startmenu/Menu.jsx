@@ -19,7 +19,7 @@ import LeagueClient from '../../../applications/LoL/LeagueClient';
 import Osu from '../../../applications/osu!/Osu';
 import Chrome from '../../../applications/Chrome/Chrome';
 
-function Menu({ clickedItem }){
+const Menu = ({ clickedItem }) => {
     return(
         <div className={styles.menu}>
             <MenuItem 

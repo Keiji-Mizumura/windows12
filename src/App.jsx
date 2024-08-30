@@ -1,17 +1,15 @@
-import React, { useState, useCallback } from "react";
-import Desktop from "./components/ui/desktop/Desktop";
-import ShortcutGrid from "./components/ui/shortcut/ShortcutGrid";
-import StartMenu from "./components/ui/taskbar/startmenu/StartMenu";
-import Taskbar from "./components/ui/taskbar/taskbar-menu/Taskbar";
-
+import React, { useState, useCallback } from "react"
+import Desktop from "./components/ui/desktop/Desktop"
+import ShortcutGrid from "./components/ui/shortcut/ShortcutGrid"
+import StartMenu from "./components/ui/taskbar/startmenu/StartMenu"
+import Taskbar from "./components/ui/taskbar/taskbar-menu/Taskbar"
 
 // Simple unique key generator function
-function generateUniqueKey() {
+const generateUniqueKey = () => {
   return `window-${Date.now()}-${Math.random()}`;
 }
 
-
-function App() {
+const App = () => {
   const [showStartMenu, setShowStartMenu] = useState(false);
   const [activeWindows, setActiveWindows] = useState([]);
   const [windowCoordinates, setWindowCoordinates] = useState({x: 200, y: 50});
@@ -25,7 +23,7 @@ function App() {
     [setActiveWindows]
   )
 
-  function setCurrentWindow(key) {
+  const setCurrentWindow = (key) => {
 
     setActiveWindows((prevWindows) =>
       prevWindows.map((window) =>
@@ -36,7 +34,7 @@ function App() {
     );
   }  
 
-  function addWindow(content, data) {
+  const addWindow = (content, data) => {
     setWindowCoordinates({
       x: windowCoordinates.x + 10,
       y: windowCoordinates.y + 10
@@ -85,7 +83,7 @@ function App() {
         />
       </Desktop>
     </>
-  );
+  )
 }
 
-export default App; 
+export default App
