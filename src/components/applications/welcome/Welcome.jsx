@@ -23,7 +23,7 @@ const Welcome = ({ onClose, onActive, coordinates, visible, title, content }) =>
                     <div className="w-full border mb-8">
                         <div className="text-center border border-white border-b-black border-b-2 border-r-black border-r-2 hover:border-black hover:border-b-white hover:border-r-white hover:cursor-pointer p-1"><div className="border border-gray-300 hover:border-black hover:border-dotted w-auto"><span className="underline">O</span>nline Registration</div></div>
                     </div>
-                    <div className="border-t-2 border-t-gray-200 pt-5">
+                    <div className="border-t-2 border-t-gray-200 pt-5" onClick={onClose}>
                       <div className="w-full border ">
                           <div className="text-center border border-white border-b-black border-b-2 border-r-black border-r-2 hover:border-black hover:border-b-white hover:border-r-white hover:cursor-pointer p-1"><div className="border border-gray-300 hover:border-black hover:border-dotted w-auto">Close</div></div>
                       </div>

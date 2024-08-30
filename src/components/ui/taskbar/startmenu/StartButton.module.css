@@ -1,9 +1,12 @@
 .start_button{
-    display: flex;
     justify-content: center;
     align-items: center;
-    gap: 1vh;
     font-weight: bold;
     font-size: 1.8vh;
-    padding: 0 5px;
+    width: 12vh;
+}
+
+.start_icon{
+    height: 100%;
+    width: 12vh;
 }

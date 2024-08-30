@@ -1,8 +1,10 @@
-import React, { useState, useCallback } from "react"
+import React, { useState, useCallback, useEffect, useRef } from "react"
 import Desktop from "./components/ui/desktop/Desktop"
 import ShortcutGrid from "./components/ui/shortcut/ShortcutGrid"
 import StartMenu from "./components/ui/taskbar/startmenu/StartMenu"
 import Taskbar from "./components/ui/taskbar/taskbar-menu/Taskbar"
+
+import Welcome from "./components/applications/welcome/Welcome"
 
 // Simple unique key generator function
 const generateUniqueKey = () => {
@@ -13,6 +15,9 @@ const App = () => {
   const [showStartMenu, setShowStartMenu] = useState(false);
   const [activeWindows, setActiveWindows] = useState([]);
   const [windowCoordinates, setWindowCoordinates] = useState({x: 200, y: 50});
+  
+  // Ref to track if the Welcome window has been added
+  const welcomeAddedRef = useRef(false);
 
   const onClose = useCallback(
     (key) => {
@@ -35,11 +40,20 @@ const App = () => {
   }  
 
   const addWindow = (content, data) => {
+    // Restrict duplication only for the "Welcome" window
+    if (data.title === "Welcome") {
+      const windowExists = activeWindows.some(window => window.title === "Welcome");
+      
+      if (windowExists) {
+        return; // If the "Welcome" window exists, exit the function early
+      }
+    }
+  
     setWindowCoordinates({
       x: windowCoordinates.x + 10,
       y: windowCoordinates.y + 10
     });
-    
+  
     const uniqueKey = generateUniqueKey(); // Generate a unique ID
     const newWindow = {
       title: data.title,
@@ -64,6 +78,16 @@ const App = () => {
     setShowStartMenu(false);
   }
   
+  
+
+  useEffect(() => {
+    // Check if the Welcome window has been added
+    if (!welcomeAddedRef.current) {
+      addWindow(<Welcome coordinates={{x: 50, y: 50}} />, {title: "Welcome", icon: ""});
+      welcomeAddedRef.current = true; // Mark the Welcome window as added
+    }
+  }, []); // No dependencies, so it only runs once when the component mounts
+  
 
   return (
     <>
@@ -86,4 +110,4 @@ const App = () => {
   )
 }
 
-export default App
+export default App;

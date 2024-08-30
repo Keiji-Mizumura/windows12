@@ -11,7 +11,7 @@ const Window = ({ children, title, onClose, icon, onActive, coordinates, default
         height: defaultSize.height,
     })
 
-    const [visible, setVisible] = useState(true)
+    const [minimized, setMinimized] = useState(false);
 
     return(
         <Draggable 
@@ -25,7 +25,7 @@ const Window = ({ children, title, onClose, icon, onActive, coordinates, default
                 height: windowSize.height + d.height,
               });
             }}
-            style={visible ? {position: "absolute", zIndex: "100"} : {display: "none"}}
+            style={!minimized ? {position: "absolute", zIndex: "100"} : {display: "none"}}
             >
             
                 <div className={styles.window} style={{ width: windowSize.width, height: windowSize.height}} onClick={onActive}>
@@ -33,7 +33,7 @@ const Window = ({ children, title, onClose, icon, onActive, coordinates, default
                         <img src={icon} className={styles.title_bar_icon}/>
                         <p className={styles.title}>{title}</p>
                         <div className={styles.controls}>
-                            <Button onClick={() => setVisible(false)}>_</Button>
+                            <Button onClick={() => setMinimized(true)}>_</Button>
                             <Button>□</Button>
                             <Button onClick={onClose}>×</Button>
                         </div>
