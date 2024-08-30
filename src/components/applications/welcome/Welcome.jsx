@@ -1,12 +1,12 @@
 import React from 'react'
 import Window from '../../applications/Window'
 
-const Welcome = ({ onClose, onActive, coordinates, visible, title, content }) => {
+const Welcome = ({ onClose, onActive, coordinates, visible, title, content, icon }) => {
   return (
     <>
         <Window title="Welcome"
                 onClose={onClose} 
-                icon=""
+                icon={icon}
                 onActive={onActive} 
                 coordinates={coordinates}
                 defaultSize={{width: 500, height: 300}}>

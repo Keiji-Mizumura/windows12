@@ -38,14 +38,14 @@ const Chrome = ({ onClose, onActive, coordinates}) =>{
                 <div className={styles.url_bar}>
                     <Button>⇦</Button>
                     <Button>⇨</Button>
-                    <Button>Refresh</Button>
-                    <form onSubmit={loadPage}>
-                        <input type="text" placeholder='url' value={currentInput} onChange={handleChange}/>
+                    <Button onClick={loadPage}>Refresh</Button>
+                    <form onSubmit={loadPage} className={styles.form}>
+                        <input type="text" placeholder='Google Search, Enter URL' value={currentInput} onChange={handleChange} className={styles.url_input}/>
                         <Button>Enter</Button>
                     </form>
                     <Button>Dowloads</Button>
                 </div>
-                <iframe className={styles.browser} src={currentURL} title="description"></iframe>
+                <iframe className={styles.browser} src={currentURL} title={currentURL}></iframe>
             </Window>
         </>
     )

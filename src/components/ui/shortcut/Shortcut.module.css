@@ -19,6 +19,15 @@
     background-color: var(--windows-blue-transparent);
 }
 
+.shortcut:active{
+    background-color: var(--windows-blue);
+}
+
+.shortcut:active > .shortcut_title{
+    background-color: blue;
+}
+
+
 .shortcut_icon{
     height: 6.5vh;
 }

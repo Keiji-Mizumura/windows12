@@ -13,11 +13,14 @@ import osuIcon from "../../../../assets/icons/osu-logo.svg";
 import chromeIcon from "../../../../assets/icons/chrome-logo.svg";
 import discordIcon from "../../../../assets/icons/discord.png";
 import folderIcon from "../../../../assets/icons/folder.png";
+import calculatorIcon from "../../../../assets/icons/calculator.png";
 
 import Notepad from '../../../applications/notepad/Notepad'
 import LeagueClient from '../../../applications/LoL/LeagueClient';
 import Osu from '../../../applications/osu!/Osu';
 import Chrome from '../../../applications/Chrome/Chrome';
+import Welcome from '../../../applications/welcome/Welcome'
+import Discord from '../../../applications/Discord/Discord';
 
 const Menu = ({ clickedItem }) => {
     return(
@@ -52,8 +55,15 @@ const Menu = ({ clickedItem }) => {
                     ,
                     {
                         title: "Discord",
-                        icon: discordIcon
+                        icon: discordIcon,
+                        onClick: () => clickedItem(<Discord/>,{
+                            title: "Discord",
+                            icon: discordIcon})
                     },
+                    {
+                        title: "Calculator",
+                        icon: calculatorIcon
+                    }
                 ]}
             />
             <MenuItem 
@@ -134,6 +144,13 @@ const Menu = ({ clickedItem }) => {
                     {
                         title: "Internet",
                         icon: settingsIcon
+                    },
+                    {
+                        title: "Welcome to Windows12",
+                        icon: settingsIcon,
+                        onClick: () => clickedItem(<Welcome title="Welcome"/>,{
+                            title: "Welcome",
+                            icon: findIcon})
                     },
                 ]}
             />

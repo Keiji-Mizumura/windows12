@@ -12,7 +12,7 @@ const Shortcut = ({ title, icon, isShortcut, onDoubleClick}) =>{
             }
 
             <img src={icon} alt={title} className={styles.shortcut_icon} />
-            {title} 
+            <p className={styles.shortcut_title}>{title}</p> 
 
         </div>
     )

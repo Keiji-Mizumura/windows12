@@ -1,8 +1,19 @@
 .browser{
     width: 100%;
-    height: calc(100% - 40px - 3vh);
+    height: calc(100% - 60px - 3vh);
 }
 
 .url_bar{
     display: flex;
+    border: 3px solid var(--main-color);
+}
+
+.form{
+    display: flex;
+    flex: 1;
+}
+
+.url_input{
+    flex: 1;
+    padding-left: 10px;
 }

@@ -13,6 +13,7 @@ import Notepad from '../../applications/notepad/Notepad'
 import Chrome from '../../applications/Chrome/Chrome'
 import LeagueClient from '../../applications/LoL/LeagueClient'
 import Osu from '../../applications/osu!/Osu'
+import Discord from '../../applications/Discord/Discord'
 
 const shortcuts = [
     {
@@ -25,6 +26,7 @@ const shortcuts = [
         title: "Discord",
         icon: discordIcon,
         isShortcut: true,
+        item: <Discord/>
     },
     {
         title: "New folder",

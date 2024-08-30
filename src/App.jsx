@@ -6,6 +6,8 @@ import Taskbar from "./components/ui/taskbar/taskbar-menu/Taskbar"
 
 import Welcome from "./components/applications/welcome/Welcome"
 
+import findIcon from "./assets/icons/find.png"
+
 // Simple unique key generator function
 const generateUniqueKey = () => {
   return `window-${Date.now()}-${Math.random()}`;
@@ -83,7 +85,7 @@ const App = () => {
   useEffect(() => {
     // Check if the Welcome window has been added
     if (!welcomeAddedRef.current) {
-      addWindow(<Welcome coordinates={{x: 50, y: 50}} />, {title: "Welcome", icon: ""});
+      addWindow(<Welcome coordinates={{x: 200, y: 150}} icon={findIcon}/>, {title: "Welcome", icon: findIcon});
       welcomeAddedRef.current = true; // Mark the Welcome window as added
     }
   }, []); // No dependencies, so it only runs once when the component mounts
