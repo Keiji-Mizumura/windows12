@@ -40,7 +40,24 @@ const Discord = ({ onClose, onActive, coordinates, visible, title, content }) =>
                         </div>
                     </div>
                     <div className={styles.selected_server}>
-                    
+                        <div className={styles.messages}>
+                            <div className={styles.message_item}>
+                                <h2 className={styles.message_user}>Bill Gates</h2>
+                                <p className={styles.message_content}>Hello there!</p>
+                            </div>
+                        </div>
+                        <div className={styles.messages}>
+                            <div className={styles.message_item}>
+                                <h2 className={styles.message_user}>Bill Gates</h2>
+                                <p className={styles.message_content}>Hello there!</p>
+                            </div>
+                        </div>
+                        <div className={styles.messages}>
+                            <div className={styles.message_item}>
+                                <h2 className={styles.message_user}>Bill Gates</h2>
+                                <p className={styles.message_content}>Hello there!</p>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </Window>

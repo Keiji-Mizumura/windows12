@@ -14,6 +14,7 @@ import chromeIcon from "../../../../assets/icons/chrome-logo.svg";
 import discordIcon from "../../../../assets/icons/discord.png";
 import folderIcon from "../../../../assets/icons/folder.png";
 import calculatorIcon from "../../../../assets/icons/calculator.png";
+import documentIcon from "../../../../assets/icons/document.png";
 
 import Notepad from '../../../applications/notepad/Notepad'
 import LeagueClient from '../../../applications/LoL/LeagueClient';
@@ -113,6 +114,10 @@ const Menu = ({ clickedItem }) => {
                     {
                         title: "100kb worth of ***",
                         icon: folderIcon
+                    },
+                    {
+                        title: "essay.doc",
+                        icon: documentIcon
                     },
                     {
                         title: "Windows32",

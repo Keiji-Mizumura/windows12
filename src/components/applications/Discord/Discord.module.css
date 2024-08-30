@@ -49,3 +49,12 @@
     height: 100%;
     flex: 1;
 }
+
+.message_item{
+    border: 1px double gray;
+    padding: 5px;
+}
+
+.message_user{
+    font-family: 'primary-font-bold';
+}
