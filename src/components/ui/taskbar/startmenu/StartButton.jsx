@@ -1,5 +1,5 @@
-import Button from "../buttons/Button"
-import WindowsLogo from "../WindowsLogo"
+import Button from "../../buttons/Button"
+import WindowsLogo from "../../WindowsLogo"
 
 import styles from './StartButton.module.css'
 

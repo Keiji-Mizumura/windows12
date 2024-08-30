@@ -3,10 +3,10 @@ import styles from './Chrome.module.css'
 import Window from "../Window"
 import MenuBar from '../MenuBar';
 
-import ChromeIcon from "../../assets/icons/chrome-logo.svg"
+import ChromeIcon from "../../../assets/icons/chrome-logo.svg"
 
 import { useState } from 'react';
-import Button from '../../components/ui/buttons/Button';
+import Button from '../../ui/buttons/Button';
 
 function Chrome({ onClose, onActive, coordinates}){
 

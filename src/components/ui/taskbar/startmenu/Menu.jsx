@@ -9,15 +9,15 @@ import settingsIcon from '../../../../assets/icons/settings.png';
 import notepadIcon from '../../../../assets/icons/notepad.png';
 import runIcon from '../../../../assets/icons/run.png';
 import leagueIcon from '../../../../assets/icons/LOL.jpg';
-import Notepad from '../../../../applications/notepad/Notepad';
 import osuIcon from "../../../../assets/icons/osu-logo.svg";
 import chromeIcon from "../../../../assets/icons/chrome-logo.svg";
 import discordIcon from "../../../../assets/icons/discord.png";
 import folderIcon from "../../../../assets/icons/folder.png";
 
-import LeagueClient from '../../../../applications/LoL/LeagueClient';
-import Osu from '../../../../applications/osu!/Osu';
-import Chrome from '../../../../applications/Chrome/Chrome';
+import Notepad from '../../../applications/notepad/Notepad'
+import LeagueClient from '../../../applications/LoL/LeagueClient';
+import Osu from '../../../applications/osu!/Osu';
+import Chrome from '../../../applications/Chrome/Chrome';
 
 function Menu({ clickedItem }){
     return(

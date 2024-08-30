@@ -1,4 +1,4 @@
-import Button from '../components/ui/buttons/Button';
+import Button from '../ui/buttons/Button';
 import styles from './Window.module.css';
 import Draggable from 'react-draggable'; // The default
 import { Resizable } from 're-resizable';

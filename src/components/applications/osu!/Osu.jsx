@@ -1,9 +1,8 @@
 import styles from './Osu.module.css'
 
-import osuIcon from '../../assets/icons/osu-logo.svg'
+import osuIcon from '../../../assets/icons/osu-logo.svg'
 
 import Window from "../Window";
-import MenuBar from '../MenuBar';
 
 function Osu({ onClose, onActive, coordinates, visible }){
     if(visible){    

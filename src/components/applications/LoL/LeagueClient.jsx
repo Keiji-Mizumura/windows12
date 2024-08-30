@@ -2,7 +2,7 @@ import styles from './LeagueClient.module.css'
 
 import Window from "../Window"
 
-import LoLIcon from "../../assets/icons/LOL.jpg"
+import LoLIcon from "../../../assets/icons/LOL.jpg"
 
 function LeagueClient({ onClose, onActive, coordinates}){
     return(

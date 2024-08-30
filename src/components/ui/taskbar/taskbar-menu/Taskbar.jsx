@@ -1,5 +1,5 @@
-import StartButton from './StartButton'
-import SystemTray from './SystemTray'
+import StartButton from '../startmenu/StartButton'
+import SystemTray from '../systemtray/SystemTray'
 import TaskbarContent from './TaskbarContent'
 
 import styles from './Taskbar.module.css'

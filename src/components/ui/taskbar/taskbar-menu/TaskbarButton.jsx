@@ -1,6 +1,6 @@
 import styles from './TaskbarButton.module.css'
 
-import Button from '../buttons/Button'
+import Button from '../../buttons/Button'
 
 function TaskbarButton({ title, icon, active, onClick }){
     return(

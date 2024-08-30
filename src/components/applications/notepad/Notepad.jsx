@@ -1,6 +1,6 @@
 import styles from './Notepad.module.css'
 
-import notepadIcon from '../../assets/icons/notepad.png'
+import notepadIcon from '../../../assets/icons/notepad.png'
 
 import Window from "../Window";
 import MenuBar from '../MenuBar';
